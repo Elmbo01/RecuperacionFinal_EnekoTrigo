@@ -1,0 +1,7 @@
+{
+  "name": "RecuperacionFinal_EnekoTrigo",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
