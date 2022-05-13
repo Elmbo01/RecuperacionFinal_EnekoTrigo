@@ -1,9 +1,11 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>cuadros-item</ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content>
-
-</ion-content>
+<ion-card>
+  <ion-card-header>
+    <ion-img [src]="{{cuadro.imagen}}"></ion-img>
+    <ion-card-title>LER: <a [routerLink]="['/cuadros', cuadro.id]">{{ cuadro.nombre }}</a></ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+    <ion-label><h6>Autor: {{ cuadro.autor }}</h6></ion-label>
+    <ion-label><h6>Fecha: {{ cuadro.fecha }} </h6> </ion-label>
+    <!-- <ion-item-divider> <ion-text>{{ cuadro.descripcion }}</ion-text></ion-item-divider> -->
+  </ion-card-content>
+</ion-card>

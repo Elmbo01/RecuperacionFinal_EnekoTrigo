@@ -1,9 +1,10 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>home</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
-
+  <div class="row p-5">
+    <div
+      *ngFor="let cuadro of cuadros"
+      class="col-12 col-md-6 col-lg-4 p- with"
+    >
+      <app-cuadro-item [cuadro]="cuadro"></app-cuadro-item>
+    </div>
+  </div>
 </ion-content>

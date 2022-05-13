@@ -8,13 +8,23 @@ import { HomePageRoutingModule } from './home-routing.module';
 
 import { HomePage } from './home.page';
 
+import { FooterComponent } from '../shared/footer/footer.component';
+import { SharedModule } from '../shared/shared.mpodule';
+import { CuadrosPageModule } from '../cuadros/cuadros.module';
+import { CoreModule } from '../core/core.module';
+
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    HomePageRoutingModule
+    HomePageRoutingModule,
+    CuadrosPageModule,
+    SharedModule,
+    CoreModule,
   ],
-  declarations: [HomePage]
+  declarations: [HomePage],
 })
 export class HomePageModule {}
+
+

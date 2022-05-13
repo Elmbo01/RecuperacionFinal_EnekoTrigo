@@ -1,9 +1,91 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>cuadros-new</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
+  <ion-card>
+    <ion-card-header>{{pageOrigin}}</ion-card-header>
+    <div *ngIf="!isLoading">
+      <ion-card-content>
+        <form novalidate (ngSubmit)="saveCuadro()" [formGroup]="cuadroForm">
 
+          <div class="form-group row mb-2">
+            <ion-label class="col-md-2 col-form-label" for="imagen"
+              >Cuadro</ion-label
+            >
+
+            <div class="col-md-8">
+              <ion-input
+                class="form-control"
+                id="imagen"
+                type="text"
+                placeholder="Url de l imagen "
+                formControlName="imagen"
+                name="imagen"
+                ngDefaultControl
+              ></ion-input>
+            </div>
+          </div>
+
+          <div class="form-group row mb-2">
+            <ion-label
+              class="col-md-2 col-form-label"
+              for="nombre"
+              >Nombre</ion-label
+            >
+            <div class="col-md-8">
+              <ion-input
+                class="form-control"
+                id="nombre"
+                placeholder="Nombre de la obra"
+                type="text"
+                formControlName="nombre"
+                name="nombre"
+                ngDefaultControl
+              ></ion-input>
+            </div>
+          </div>
+
+          <div class="form-group row mb-2">
+            <ion-label class="col-md-2 col-form-label" for="autor"
+              >Autor</ion-label
+            >
+
+            <div class="col-md-8">
+              <ion-input
+                class="form-control"
+                id="autor"
+                placeholder="Autor"
+                type="text"
+                formControlName="autor"
+                name="autor"
+                ngDefaultControl
+              ></ion-input>
+            </div>
+          </div>
+
+          <div class="form-group row mb-2">
+            <ion-label class="col-md-2 col-form-label" for="fecha"
+              >Fecha</ion-label
+            >
+            <div class="col-md-8">
+              <ion-input
+                class="form-control"
+                id="fecha"
+                placeholder="Fecha"
+                type="date"
+                formControlName="fecha"
+                name="fecha"
+                ngDefaultControl
+              ></ion-input>
+            </div>
+          </div>         
+
+          <div class="form-group row mb-2">
+            <div class="offset-md-2 col-md-4">
+              <ion-button type="submit">Save</ion-button>
+              <ion-button [routerLink]="['']"> Cancel </ion-button>
+            </div>
+          </div>
+        </form>
+      </ion-card-content>
+    </div>
+    <div class="alert alert-danger" *ngIf="errorMessage">{{errorMessage}}</div>
+  </ion-card>
 </ion-content>

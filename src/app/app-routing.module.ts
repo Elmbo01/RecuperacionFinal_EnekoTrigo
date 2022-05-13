@@ -3,19 +3,35 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
+    path: 'home',
+    loadChildren: () =>
+      import('./home/home.module').then((m) => m.HomePageModule),
+  },
+  {
     path: '',
     redirectTo: 'home',
     pathMatch: 'full',
   },
   {
-    path: 'cuadros',
+    path: 'cuadros/:id/new',
     loadChildren: () =>
-      import('./cuadros/cuadros.module').then((m) => m.CuadrosPageModule),
+      import('./cuadros/cuadros-new/cuadro-new.module').then(
+        (m) => m.CuadroNewPageModule
+      ),
   },
   {
-    path: 'home',
+    path: 'cuadros/:id/edit',
     loadChildren: () =>
-      import('./home/home.module').then((m) => m.HomePageModule),
+      import('./cuadros/cuadros-edit/cuadro-edit.module').then(
+        (m) => m.CuadroEditPageModule
+      ),
+  },
+  {
+    path: 'cuadros/:cuadroId',
+    loadChildren: () =>
+      import('./cuadros/cuadros-detail/cuadro-detail.module').then(
+        (m) => m.CuadroDetailPageModule
+      ),
   },
 ];
 
