@@ -13,4 +13,3 @@ import { CuadroData } from './cuadro-data';
   providers: [CuadroService],
 })
 export class CoreModule {}
-
