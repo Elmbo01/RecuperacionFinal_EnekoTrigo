@@ -4,14 +4,12 @@ import { CuadroService } from './cuadro.service';
 import { HttpClientModule } from '@angular/common/http';
 
 // Import for loading & configuring in-memory web api
-// https://627a7de773bad506858a243f.mockapi.io/Cuadro
+import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { CuadroData } from './cuadro-data';
 
 @NgModule({
   declarations: [],
-  imports: [
-    CommonModule,
-    HttpClientModule,
-  ],
+  imports: [CommonModule, HttpClientModule],
   providers: [CuadroService],
 })
 export class CoreModule {}

@@ -1,9 +1,20 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>home</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
-
+  <div
+    class="row"
+    style="
+      background: linear-gradient(
+        70deg,
+        rgb(161, 208, 190),
+        rgb(158, 193, 217)
+      );
+    "
+  >
+    <div *ngFor="let cuadro of cuadros" class="col-12 col-md-6 col-lg-3">
+      <ion-card>
+        <ion-card-header>
+          <app-cuadro-item [cuadro]="cuadro"></app-cuadro-item>
+        </ion-card-header>
+      </ion-card>
+    </div>
+  </div>
 </ion-content>

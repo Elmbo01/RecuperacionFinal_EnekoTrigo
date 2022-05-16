@@ -1,20 +1,21 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
 
-import { IonicModule } from '@ionic/angular';
-
-import { CuadrosPageRoutingModule } from './cuadros-routing.module';
-
-import { CuadrosPage } from './cuadros.page';
+import { CuadrosRoutingModule } from './cuadros-routing.module';
+import { SharedModule } from '../shared/shared.module';
+import { CuadroNewComponent } from './cuadro-new/cuadro-new.component';
+import { CuadroEditComponent } from './cuadro-edit/cuadro-edit.component';
+import { CuadroDetailComponent } from './cuadro-detail/cuadro-detail.component';
+import { CuadroItemComponent } from './cuadro-item/cuadro-item.component';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    FormsModule,
-    IonicModule,
-    CuadrosPageRoutingModule
+  declarations: [
+    CuadroNewComponent,
+    CuadroItemComponent,
+    CuadroEditComponent,
+    CuadroDetailComponent,
   ],
-  declarations: [CuadrosPage]
+  imports: [CommonModule, CuadrosRoutingModule, SharedModule],
+  exports: [CuadroItemComponent],
 })
-export class CuadrosPageModule {}
+export class CuadrosModule {}
