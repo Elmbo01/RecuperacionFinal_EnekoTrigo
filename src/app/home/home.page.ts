@@ -17,14 +17,4 @@ export class HomePage implements OnInit {
       .subscribe((data: Cuadro[]) => (this.cuadros = data));
       
   }
-<<<<<<< HEAD
-
-
-  ionViewDidEnter() {
-    this.cuadroService
-      .getCuadros()
-      .subscribe((data: Cuadro[]) => (this.cuadros = data));
-  }
-=======
->>>>>>> dev
 }
