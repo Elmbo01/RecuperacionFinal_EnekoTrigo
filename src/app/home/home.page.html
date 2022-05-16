@@ -1,4 +1,5 @@
 <ion-content>
+<<<<<<< HEAD
   <div class="row p-5">
     <div
       *ngFor="let cuadro of cuadros"
@@ -8,3 +9,24 @@
     </div>
   </div>
 </ion-content>
+=======
+  <div
+    class="row"
+    style="
+      background: linear-gradient(
+        70deg,
+        rgb(161, 208, 190),
+        rgb(158, 193, 217)
+      );
+    "
+  >
+    <div *ngFor="let cuadro of cuadros" class="col-12 col-md-6 col-lg-3">
+      <ion-card>
+        <ion-card-header>
+          <app-cuadro-item [cuadro]="cuadro"></app-cuadro-item>
+        </ion-card-header>
+      </ion-card>
+    </div>
+  </div>
+</ion-content>
+>>>>>>> dev

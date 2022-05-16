@@ -1,0 +1,35 @@
+<!--
+ 
+    <figure class="figure">
+  <img
+    src="{{ cuadro.imagen }}"
+    class="figure-img img-fluid rounded"
+    style="width: 150px; height: 150px"
+  />
+  <figcaption class="figure-caption">
+    <h5>
+      <a [routerLink]="['/cuadros', cuadro.id]">{{ cuadro.nombre }}</a>
+      <span>{{ cuadro.autor }}</span>
+    </h5>
+    <p>{{ cuadro.fecha }}</p>
+  </figcaption>
+</figure>
+
+-->
+
+<ion-card>
+  <ion-card-header>
+    <ion-card-title
+      ><a [routerLink]="['/cuadros', cuadro.id]">{{
+        cuadro.nombre
+      }}</a></ion-card-title
+    >
+    <ion-img [src]="cuadro.imagen"></ion-img>
+  </ion-card-header>
+  <ion-card-content>
+    <ion-label><h6>Autor: {{ cuadro.autor }}</h6></ion-label>
+    <ion-label
+      ><h6>Fecha: {{ cuadro.fecha }}</h6>
+    </ion-label>
+  </ion-card-content>
+</ion-card>

@@ -69,7 +69,7 @@ export class CuadroService {
     const url = `${this.cuadrosUrl}/${cuadro.id}`;
     return this.http.put<Cuadro>(url, cuadro, { headers: headers }).pipe(
       tap(() => console.log('updateCuadro: ' + cuadro.id)),
-      // Return the cuadro on an update
+      // Return the product on an update
       map(() => cuadro),
       catchError(this.handleError)
     );
